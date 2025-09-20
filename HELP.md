@@ -18,7 +18,8 @@ For further reference, please consider the following sections:
 
 ### Servicios Disponibles
 * Crear un cliente
-```curl --location 'http://localhost:8089/customer' \
+```
+curl --location 'http://{{url_servicio_customer}}/customer' \
 --header 'Content-Type: application/json' \
 --data-raw '{
     "documentType": "CC",
@@ -42,14 +43,16 @@ For further reference, please consider the following sections:
 ```
 
 * Consultar cliente por documentType y documentNumber
-``` curl --location --request GET 'http://localhost:8089/customer/CC/57455823' \
+``` 
+curl --location --request GET 'http://{{url_servicio_customer}}/customer/CC/57455823' \
 --header 'Content-Type: application/json' \
 --data '
 '
 ```
 
 * Consultar existencia y estado de un cliente
-```   curl --location --request GET 'http://localhost:8089/customer/status?documentType=CC&documentNumber=57455823' \
+```   
+curl --location --request GET 'http://{{url_servicio_customer}}/customer/status?documentType=CC&documentNumber=57455823' \
   --header 'Content-Type: application/json' \
   --data '
   '
@@ -57,7 +60,8 @@ For further reference, please consider the following sections:
 
 * Consultar todos los clientes
 
-``` curl --location --request GET 'http://localhost:8089/customer/customers' \
+``` 
+curl --location --request GET 'http://{{url_servicio_customer}}/customer/customers' \
 --header 'Content-Type: application/json' \
 --data '
 '
